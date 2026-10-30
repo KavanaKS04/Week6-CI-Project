@@ -1,41 +1,78 @@
-# Week 6 - Continuous Integration in Python
+# Week 6 - Continuous Integration Project
 
 ## Project Overview
-This project demonstrates Continuous Integration (CI)
-using a Python Student Marks Calculator.
+This project demonstrates Continuous Integration (CI) using GitHub Actions for a Python Student Marks Calculator.
 
-## Features
-- Calculates student average marks.
-- Assigns grades.
-- Validates student names and marks.
-- Handles invalid input.
+The application calculates the average marks, assigns grades, and generates student reports. Unit tests are used to verify the functionality, and Ruff checks code quality.
 
-## Project Files
-- student_marks.py - Main Python application.
-- test_student_marks.py - Automated unit tests.
-- requirements.txt - Dependency information.
-- .github/workflows/ci.yml - GitHub Actions workflow.
+## Project Structure
 
-## How to Run
-Run the application:
+```text
+Week6-CI-Project/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── student_marks.py
+├── test_student_marks.py
+├── requirements.txt
+├── .gitignore
+├── ci_testing_log.txt
+├── Week6_CI_Report.docx
+└── README.md
+```
 
+## Requirements
+- Python 3.10 or later
+- Ruff
+
+## How to Run the Project
+
+Open a terminal in the project folder and run:
+
+```bash
 python student_marks.py
+```
 
-## How to Run Tests
+## How to Run Unit Tests
+
 Run:
 
+```bash
 python -m unittest -v
+```
+
+The project contains 10 unit tests covering average calculation, grade assignment, input validation, and report generation.
+
+## Code Quality Check
+
+Install Ruff:
+
+```bash
+python -m pip install ruff
+```
+
+Run the code quality check:
+
+```bash
+ruff check student_marks.py test_student_marks.py
+```
 
 ## Continuous Integration
-GitHub Actions automatically runs the
-automated tests when code is pushed to main
-or when a pull request targets main.
 
-## Test Results
-All 10 automated unit tests passed locally.
+GitHub Actions automatically runs the following checks when code is pushed to the `main` branch or a pull request targets `main`:
 
-## Tools Used
-- Python 3.13
-- Python unittest
-- GitHub
-- GitHub Actions
+1. Checks out the repository.
+2. Sets up Python.
+3. Installs Ruff.
+4. Checks code quality.
+5. Runs automated unit tests.
+
+## Testing Results
+
+- Automated unit tests: Passed locally (10 tests).
+- Ruff code quality check: Passed locally.
+- GitHub Actions: Latest workflow run succeeded.
+
+## Conclusion
+
+This project demonstrates automated testing and code quality checks using GitHub Actions to support reliable Python development.
