@@ -1,0 +1,34 @@
+WEEK 6 - CONTINUOUS INTEGRATION PROJECT
+LOCAL TESTING LOG
+
+Project: Student Marks Calculator
+
+1. AUTOMATED UNIT TESTING
+Command: py -m unittest -v
+Result: PASSED
+Total tests: 10
+Successful tests: 10
+
+2. CODE QUALITY CHECK
+Command:
+ruff check student_marks.py test_student_marks.py
+
+Result: All checks passed!
+
+3. TESTING SUMMARY
+Average calculation: PASSED
+Empty marks: PASSED
+Empty student name: PASSED
+Grade A: PASSED
+Grade B: PASSED
+Grade C: PASSED
+Grade F: PASSED
+Invalid marks: PASSED
+Negative marks: PASSED
+Student report: PASSED
+
+4. CONCLUSION
+All 10 automated tests passed locally.
+Ruff code quality check passed locally.
+
+GitHub Actions execution: Pending verification.
